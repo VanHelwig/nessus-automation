@@ -1,0 +1,9 @@
+nessus:
+  url: "https://<nessus-server-ip>:8834"
+  access_key: "<your-access-key>"
+  secret_key: "<your-secret-key>"
+
+scan_templates:
+  windows_stig: "<windows-stig-template-uuid>"
+  esxi_stig: "<esxi-stig-template-uuid>"
+  network_stig: "<network-stig-template-uuid>"
