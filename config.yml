@@ -1,7 +1,5 @@
 nessus:
   url: "https://<nessus-server-ip>:8834"
-  access_key: "<your-access-key>"
-  secret_key: "<your-secret-key>"
 
 scan_templates:
   windows_stig: "<windows-stig-template-uuid>"
