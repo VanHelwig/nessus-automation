@@ -1,0 +1,16 @@
+equipment:
+  workstations:
+    scan_type: windows_stig
+    hosts:
+      - workstation1.domain.local
+      - workstation2.domain.local
+  servers:
+    scan_type: esxi_stig
+    hosts:
+      - server1.domain.local
+      - server2.domain.local
+  network_equipment:
+    scan_type: network_stig
+    hosts:
+      - router1.domain.local
+      - switch1.domain.local
