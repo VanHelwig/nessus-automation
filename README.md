@@ -1,4 +1,4 @@
-# Nessus Conditional Scanning Automation
+# Nessus Scanning Automation
 
 This project provides a Python script to automate conditional Nessus scans based on device availability and specific scan profiles. The script reads configurations from two YAML files and checks if network devices are online before initiating Nessus scans. This setup is especially useful for environments where equipment may go offline for extended periods, allowing for efficient and targeted vulnerability scanning.
 
