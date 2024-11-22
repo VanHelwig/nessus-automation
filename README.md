@@ -36,13 +36,13 @@ The script leverages the Nessus API to create and launch scans based on a device
 3. **Set up environment variables for API keys**:
    - On Linux/macOS:
      ```bash
-     export NESSUS_ACCESS_KEY="your-access-key"
-     export NESSUS_SECRET_KEY="your-secret-key"
+     export NESSUS_ACCESS_KEY='access-key'
+     export NESSUS_SECRET_KEY='secret-key'
      ```
    - On Windows:
      ```powershell
-     $env:NESSUS_ACCESS_KEY="your-access-key"
-     $env:NESSUS_SECRET_KEY="your-secret-key"
+     $env:NESSUS_ACCESS_KEY='access-key'
+     $env:NESSUS_SECRET_KEY='secret-key'
      ```
 
 ### Executing program
