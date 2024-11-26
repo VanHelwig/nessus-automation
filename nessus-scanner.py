@@ -22,7 +22,7 @@ def is_online(hostname):
     Pings the hostname to check if it's online.
     Returns True if the host responds, False otherwise.
     """
-    response = os.system(f"ping -c 1 {hostname} > /dev/null 2>&1")
+    response = os.system(f'ping -c 1 {hostname} > /dev/null 2>&1')
     return response == 0  # 0 indicates success (host is online)
 
 # Launch Nessus scan for an online host with specific scan type
@@ -43,27 +43,27 @@ def launch_nessus_scan(hostname, scan_type, nessus_url, headers, scan_templates)
     # Get the UUID for the scan type
     template_uuid = scan_templates.get(scan_type)
     if not template_uuid:
-        print(f"Scan type {scan_type} not found in template mapping.")
+        print(f'Scan type {scan_type} not found in template mapping.')
         return None
 
     # Define the payload with scan configuration
     scan_payload = {
-        "uuid": template_uuid,
-        "settings": {
-            "name": f"Scan for {hostname} - {scan_type}",
-            "text_targets": hostname,
-            "enabled": True
+        'uuid': template_uuid,
+        'settings': {
+            'name': f'Scan for {hostname} - {scan_type}',
+            'text_targets': hostname,
+            'enabled': True
         }
     }
     
     # Send the scan creation request to the Nessus API
-    response = requests.post(f"{nessus_url}/scans", headers=headers, json=scan_payload)
+    response = requests.post(f'nessus_url}/scans', headers=headers, json=scan_payload)
     if response.status_code == 200:
         scan_id = response.json()['scan']['id']
-        print(f"Scan created and launched for {hostname} with ID: {scan_id}")
+        print(f'Scan created and launched for {hostname} with ID: {scan_id}')
         return scan_id
     else:
-        print(f"Failed to create scan for {hostname}.")
+        print(f'Failed to create scan for {hostname}.')
         return None
 
 # Main function to process the inventory and configuration
