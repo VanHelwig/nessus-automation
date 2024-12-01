@@ -57,9 +57,9 @@ The script leverages the Nessus API to create and launch scans based on a device
      url: 'https://<nessus-server-ip>:8834'
 
    scan_templates:
-     windows_stig: '<windows-stig-template-uuid>'
-     esxi_stig: '<esxi-stig-template-uuid>'
-     network_stig: '<network-stig-template-uuid>'
+     windows_stig: '<windows-stig-profile-uuid>'
+     esxi_stig: '<esxi-stig-profile-uuid>'
+     network_stig: '<network-stig-profile-uuid>'
    ```
 
    Example `inventory.yml`:
