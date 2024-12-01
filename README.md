@@ -66,17 +66,17 @@ The script leverages the Nessus API to create and launch scans based on a device
    ```yaml
    equipment:
      workstations:
-       scan_type: windows_stig
+       scan_type: windows_stig_profile
        hosts:
          - workstation1.domain.local
          - workstation2.domain.local
      servers:
-       scan_type: esxi_stig
+       scan_type: esxi_stig_profile
        hosts:
          - server1.domain.local
          - server2.domain.local
      network_equipment:
-       scan_type: network_stig
+       scan_type: network_stig_profile
        hosts:
          - router1.domain.local
          - switch1.domain.local
