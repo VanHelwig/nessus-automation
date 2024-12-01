@@ -90,15 +90,15 @@ def main():
         # Loop through each hostname under the current equipment type
         for hostname in details['hosts']:
             if is_online(hostname):  # Check if the host is online
-                print(f"{hostname} is online. Launching {scan_type} scan...")
+                print(f'{hostname} is online. Launching {scan_type} scan...')
                 scan_id = launch_nessus_scan(hostname, scan_type, nessus_url, headers, scan_templates)
                 if scan_id:
                     scan_ids.append(scan_id)  # Append successful scan IDs
             else:
-                print(f"{hostname} is offline. Skipping scan.")
+                print(f'{hostname} is offline. Skipping scan.')
 
     # Output the list of successfully launched scans
-    print(f"Scans launched for the following hosts: {scan_ids}")
+    print(f'Scans launched for the following hosts: {scan_ids}')
 
 # Entry point for the script
 if __name__ == "__main__":
