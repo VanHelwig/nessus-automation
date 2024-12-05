@@ -1,8 +1,8 @@
 #!/bin/python3
 
 import os               # Standard library to interact with the OS, used for pinging hosts
-import yaml             # YAML library to load configuration and inventory files
 import requests         # Requests library to interact with the Nessus API
+import yaml             # YAML library to load configuration and inventory files
 
 # Load YAML configuration
 def load_config(file_path='config.yml'):
